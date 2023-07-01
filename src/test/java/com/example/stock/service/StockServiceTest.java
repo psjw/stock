@@ -77,7 +77,7 @@ class StockServiceTest {
         assertEquals(0L, stock.getQuantity());
 
         //왜 실패인가?
-        //Race Conditon  발생 -> 둘 이상의 스레드가 데이터를 Access를 할 수 있고, 동시에 변경을 하려고 할때 발생
+        //Race Condition  발생 -> 둘 이상의 스레드가 데이터를 Access를 할 수 있고, 동시에 변경을 하려고 할때 발생
         //예상
         // Thread-1                                             Stock                   Thread-2
         //select * from stock where id = 1                     {id: 1, quantity : 5}
